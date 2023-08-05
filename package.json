@@ -1,0 +1,14 @@
+{
+  "name": "ejemplo-metodos-dummy",
+  "version": "1.0.0",
+  "description": "Ejemplo de la diferencia entre un método \"dummy\" y uno que retorna datos para comisión backend 47280 CoderHouse",
+  "main": "ejemploDatos.js",
+  "type": "module",
+  "scripts": {
+    "dummy": "node ejemploDummy.js",
+    "datos": "node ejemploDatos.js"
+  },
+  "keywords": [],
+  "author": "Marcos J. Peña Pollastri",
+  "license": "ISC"
+}
