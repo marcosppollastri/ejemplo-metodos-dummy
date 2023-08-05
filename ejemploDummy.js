@@ -18,7 +18,7 @@ class ProductManager {
 
     getProductById(id) {
         const product = this.products.find((product) => product.id === id) //busco el primer producto en el array de products que cumpla con la condición
-        return console.log(products) //esto solo retorna una llamada de console.log que imprime en pantalla, pero los datos no son retornados
+        return console.log(product) //esto solo retorna una llamada de console.log que imprime en pantalla, pero los datos no son retornados
     }
 }
 
@@ -33,19 +33,14 @@ promoInterMiami()
 
 // SALIDA DE EJECUCIÓN
 // marcos@Bocchi:~/coder-house/ejemplo-metodos-dummy$ node ejemploDummy.js 
-// /home/marcos/coder-house/ejemplo-metodos-dummy/ejemploDummy.js:21
-//         return console.log(products) //esto solo retorna una llamada de console.log que imprime en pantalla, pero los datos no son retornados
-//                            ^
+// { id: 0, name: 'Camiseta Inter Miami', price: 200, stock: 10 }
+// file:///home/marcos/coder-house/ejemplo-metodos-dummy/ejemploDummy.js:28
+//     product.price *= 0.8 //quiero hacer una promo de 20% de descuento en este producto accediendo a la propiedad price del producto que creo devuelve getProductById
+//     ^
 
-// ReferenceError: products is not defined 
-//     at ProductManager.getProductById (/home/marcos/coder-house/ejemplo-metodos-dummy/ejemploDummy.js:21:28)
-//     at promoInterMiami (/home/marcos/coder-house/ejemplo-metodos-dummy/ejemploDummy.js:27:36)
-//     at Object.<anonymous> (/home/marcos/coder-house/ejemplo-metodos-dummy/ejemploDummy.js:32:1)
-//     at Module._compile (node:internal/modules/cjs/loader:1254:14)
-//     at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
-//     at Module.load (node:internal/modules/cjs/loader:1117:32)
-//     at Module._load (node:internal/modules/cjs/loader:958:12)
-//     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-//     at node:internal/main/run_main_module:23:47
+// TypeError: Cannot read properties of undefined (reading 'price')
+//     at promoInterMiami (file:///home/marcos/coder-house/ejemplo-metodos-dummy/ejemploDummy.js:28:5)
+//     at file:///home/marcos/coder-house/ejemplo-metodos-dummy/ejemploDummy.js:32:1
+//     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
 
 // Node.js v18.16.0
